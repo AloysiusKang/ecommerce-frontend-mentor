@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./style.css">
 
   <!-- JS -->
+  <script src="./style.js" defer></script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,16 +22,19 @@
 <body>
   <header>
     <nav class="nav">
-      <img src="./images/logo.svg" alt="Sneakers Logo">
-      <ul class="nav__list">
+      <button class="hamburger" data-hidden="true"><img src="./images/icon-menu.svg" alt="Hamburger Icon"></button>
+      <img class="nav__logo" src="./images/logo.svg" alt="Sneakers Logo">
+      <ul class="nav__list bg-neutral-100" data-hidden="true">
         <li><a href="#" class="nav__link">Collections</a></li>
         <li><a href="#" class="nav__link">Men</a></li>
         <li><a href="#" class="nav__link">Women</a></li>
         <li><a href="#" class="nav__link">About</a></li>
         <li><a href="#" class="nav__link">Contact</a></li>
       </ul>
-      <img src="./images/icon-cart.svg" alt="Cart icon">
-      <img src="./images/image-avatar.png" alt="Profile Picture">
+      <div class="nav__profile">
+        <button class="nav__cart"><img src="./images/icon-cart.svg" alt="Cart icon"></button>
+        <img class="nav__profile-picture" src="./images/image-avatar.png" alt="Profile Picture">
+      </div>
     </nav>
   </header>
   
@@ -47,20 +51,22 @@
       </div>
 
       <div class="purchase">
-        <p>Sneaker Company</p>
-        <h1>Fall Limited Edition Sneakers</h1>
+        <p class="clr-primary-400 uppercase fw-700">Sneaker Company</p>
+        <h1 class="clr-neutral-900 fs-30 fw-700">Fall Limited Edition Sneakers</h1>
         <p>
           These low-profile sneakers are your perfect casual wear companion. Featuring a
           durable rubber outer sole, they’ll withstand everything the weather can offer.
         </p>
-        <p>$125.00<span>50%</span></p>
-        <p>$250.00</p>
-        <div class="quantity__wrapper">
+        <div class="price__wrapper">
+          <p class="price clr-neutral-900 fs-30 fw-700">$125.00<span class="clr-primary-400 fs-16 fw-700 bg-primary-200">50%</span></p>
+          <p class="original-price line-through">$250.00</p>
+        </div>
+        <div class="quantity__wrapper bg-accent-300">
           <button><img src="./images/icon-minus.svg" alt="Minus Button"></button>
-          <p>0</p>
+          <p class="clr-neutral-900 fw-700">0</p>
           <button><img src="./images/icon-plus.svg" alt="Plus Button"></button>
         </div>
-        <button class=""><span><img src="./images/icon-cart white.svg" alt="cart icon"></span>Add to cart</button>
+        <button class="btn-primary bg-primary-400 clr-neutral-100 fw-700"><span><img src="./images/icon-cart white.svg" alt="cart icon"></span>Add to cart</button>
       </div>
     </section>
   </main>
